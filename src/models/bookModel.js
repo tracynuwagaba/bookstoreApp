@@ -1,0 +1,16 @@
+const mongoose = require('mongoose');
+
+// create schema
+const bookSchema = new mongoose.Schema({
+    title: String,
+    author: String,
+    description: String,
+    category: String,
+    purchaseCount: Number,
+    imageUrl: String,
+    tags: Array
+});
+
+// convert the bookSchema into a model
+const Book = mongoose.model('Book', bookSchema);
+module.exports = Book;
